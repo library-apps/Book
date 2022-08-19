@@ -8,6 +8,6 @@ import com.books.books.model.Book;
 @Repository
 public interface BookRepository extends MongoRepository<Book, Integer> {
 
-    public Book findByBookTitle(String bookString);
+    public Book findByTitle(String bookString);
 
 }
