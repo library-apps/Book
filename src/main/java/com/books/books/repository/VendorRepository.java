@@ -7,5 +7,7 @@ import com.books.books.model.Vendor;
 
 @Repository
 public interface VendorRepository extends MongoRepository<Vendor, Integer> {
+
+    // public Vendor getId(String id);
     
 }

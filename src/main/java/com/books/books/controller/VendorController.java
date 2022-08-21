@@ -12,29 +12,17 @@ import lombok.SneakyThrows;
 @Slf4j
 @RestController
 @RequestMapping(value = "/api/v1/vendor")
-// @Api("REST API Documentation for Library Project")
-// @ApiResponses(value = { 
-//     @ApiResponse(code = 200, message = "Successfully retrieve the data!"),
-//     @ApiResponse(code = 201, message = "Successfully create a book!"),
-//     @ApiResponse(code = 401, message = "You are not authorized!"),
-//     @ApiResponse(code = 403, message = "Forbidden data."),
-//     @ApiResponse(code = 404, message = "Data has been deleted or not exist."),
-//     @ApiResponse(code = 500, message = "Server Error") 
-// })
-// @ApiOperation(value = "An API for Books", produces = MediaType.APPLICATION_JSON_VALUE)
-
 public class VendorController {
     @Autowired
     private VendorService vendorService;
 
-    @SneakyThrows(Exception.class)
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<Object> getVendor(@PathVariable(value="id") Integer id){
-        log.info("GET http://localhost:8080/api/v1/vendor/{} is called", id);
-		return vendorService.getVendor(id);
-    }
+    // @SneakyThrows(Exception.class)
+    // @GetMapping(value = "/{id}")
+    // public ResponseEntity<Object> getVendor(@PathVariable(value="id") String id){
+    //     log.info("GET http://localhost:8080/api/v1/vendor/{} is called", id);
+	// 	return vendorService.getVendor(id);
+    // }
 
-    //POST
     @SneakyThrows(Exception.class)
     @PostMapping(value = "/add")
     public ResponseEntity<Object> createVendor(@RequestBody CreateVendor dto){
@@ -43,19 +31,19 @@ public class VendorController {
     }
 
     //PUT
-    @SneakyThrows(Exception.class)
-    @PutMapping(value = "/{id}")
-    public ResponseEntity<Object> updateVendor(@RequestBody UpdateVendor dto){
-        log.info("PUT http://localhost:8080/api/v1/vendor/{} is called");
-        return vendorService.updateVendor(dto);
-    }
+    // @SneakyThrows(Exception.class)
+    // @PutMapping(value = "/{id}")
+    // public ResponseEntity<Object> updateVendor(@RequestBody UpdateVendor dto){
+    //     log.info("PUT http://localhost:8080/api/v1/vendor/{} is called");
+    //     return vendorService.updateVendor(dto);
+    // }
     //DELETE
-    @SneakyThrows(Exception.class)
-    @DeleteMapping(value = "/delete/{id_vendor}")
-    public ResponseEntity<Object> deleteVendor(@PathVariable(name = "id") Integer id){
-        log.info("DELETE http://localhost:8080/api/v1/vendor/delete/{} is called", id);
-        return vendorService.deleteVendor(id);
-    }
+    // @SneakyThrows(Exception.class)
+    // @DeleteMapping(value = "/delete/{id_vendor}")
+    // public ResponseEntity<Object> deleteVendor(@PathVariable(name = "id") Integer id){
+    //     log.info("DELETE http://localhost:8080/api/v1/vendor/delete/{} is called", id);
+    //     return vendorService.deleteVendor(id);
+    // }
     //GETALL
     @SneakyThrows(Exception.class)
     @GetMapping(value = "/")

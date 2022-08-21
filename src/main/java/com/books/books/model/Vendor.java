@@ -18,7 +18,8 @@ import org.springframework.data.mongodb.core.mapping.*;
 
 //class
 public class Vendor {
-    @Id private int id;
+    @Id 
+    private String id;
     private String vendor_name;
     private String contact_person;
     private String email;
@@ -27,4 +28,8 @@ public class Vendor {
     private String status;
     private Date deleted_at;
     private Integer is_deleted;
+
+    // public String getId() {
+    //     return id;
+    // }
 }

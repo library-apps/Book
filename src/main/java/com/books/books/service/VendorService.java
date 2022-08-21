@@ -45,37 +45,37 @@ public class VendorService {
     }
 	
 	// updateBook
-    @SneakyThrows(Exception.class)
-    public ResponseEntity<Object> updateVendor(UpdateVendor dto){
-        HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
+    // @SneakyThrows(Exception.class)
+    // public ResponseEntity<Object> updateVendor(UpdateVendor dto){
+    //     HttpHeaders headers = new HttpHeaders();
+	// 	headers.setContentType(MediaType.APPLICATION_JSON);
 
-		Map<String, Object> res = new HashMap<String, Object>();
+	// 	Map<String, Object> res = new HashMap<String, Object>();
 
-		val vendor = vendorRepository.findById(dto.getId()).orElse(null);
+	// 	val vendor = vendorRepository.getId(dto.getId());
 
-        if(Optional.ofNullable(vendor).isPresent()){            
-            vendor.setVendor_name(dto.getVendor_name());
-            vendor.setContact_person(dto.getContact_person());
-            vendor.setEmail(dto.getEmail());
-            vendor.setAddress(dto.getAddress());
-            vendor.setPhone(dto.getPhone());
-            vendor.setStatus(dto.getStatus());
-            vendor.setIs_deleted(dto.getIs_deleted());
+    //     if(Optional.ofNullable(vendor).isPresent()){            
+    //         vendor.setVendor_name(dto.getVendor_name());
+    //         vendor.setContact_person(dto.getContact_person());
+    //         vendor.setEmail(dto.getEmail());
+    //         vendor.setAddress(dto.getAddress());
+    //         vendor.setPhone(dto.getPhone());
+    //         vendor.setStatus(dto.getStatus());
+    //         vendor.setIs_deleted(dto.getIs_deleted());
 
-            vendorRepository.save(vendor);
+    //         vendorRepository.save(vendor);
     
-            res.put("message", "success");
-            res.put("data", vendor);
-        } else {
-            res.put("message", "failed");
-            res.put("data", null);
-        }
+    //         res.put("message", "success");
+    //         res.put("data", vendor);
+    //     } else {
+    //         res.put("message", "failed");
+    //         res.put("data", null);
+    //     }
 
-        res.put("code", HttpStatus.OK.value());
+    //     res.put("code", HttpStatus.OK.value());
 
-        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
-    }
+    //     return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
+    // }
 
 	// getBook
     @SneakyThrows(Exception.class)
@@ -120,35 +120,35 @@ public class VendorService {
 	}
 
 	// deleteBook
-    @SneakyThrows(Exception.class)
-	public ResponseEntity<Object> deleteVendor(Integer id) {
+    // @SneakyThrows(Exception.class)
+	// public ResponseEntity<Object> deleteVendor(Integer id) {
 
-		HttpHeaders headers = new HttpHeaders();
-		headers.setContentType(MediaType.APPLICATION_JSON);
+	// 	HttpHeaders headers = new HttpHeaders();
+	// 	headers.setContentType(MediaType.APPLICATION_JSON);
 
-		Map<String, Object> res = new HashMap<String, Object>();
+	// 	Map<String, Object> res = new HashMap<String, Object>();
 
-		val vendor = vendorRepository.findById(id).orElse(null);
+	// 	val vendor = vendorRepository.findById(id).orElse(null);
 
-		if (Optional.ofNullable(vendor).isPresent()) {
+	// 	if (Optional.ofNullable(vendor).isPresent()) {
 
-			vendor.setDeleted_at(new Date());
-            vendor.setIs_deleted(1);
+	// 		vendor.setDeleted_at(new Date());
+    //         vendor.setIs_deleted(1);
 
-            vendorRepository.save(vendor);
+    //         vendorRepository.save(vendor);
 
-			res.put("message", "success");
-			res.put("data", vendor);
+	// 		res.put("message", "success");
+	// 		res.put("data", vendor);
 
-		} else {
-			res.put("message", "failed");
-			res.put("data", null);
-		}
+	// 	} else {
+	// 		res.put("message", "failed");
+	// 		res.put("data", null);
+	// 	}
 
-		res.put("code", HttpStatus.OK.value());
+	// 	res.put("code", HttpStatus.OK.value());
 
-		return ResponseEntity.status(HttpStatus.OK).headers(headers).body(res);
-	}
+	// 	return ResponseEntity.status(HttpStatus.OK).headers(headers).body(res);
+	// }
 
     
 }

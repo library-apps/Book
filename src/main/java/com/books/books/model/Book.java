@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+// import org.bson.types.ObjectId;
 import org.springframework.data.annotation.*;
 
 import org.springframework.data.mongodb.core.mapping.*;
@@ -19,6 +20,7 @@ import org.springframework.data.mongodb.core.mapping.*;
 //class
 public class Book {
     @Id
+    private String id;
     private String title;
     private String author;
     private String summary;
@@ -28,4 +30,8 @@ public class Book {
     private String image;
     private Date deleted_at;
     private Integer is_deleted;
+
+    // public ObjectId getId(String string) {
+    //     return id;
+    // }
 }

@@ -25,7 +25,7 @@ public class VendorDto {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class UpdateVendor{
-        private Integer id;
+        private String id;
         private String vendor_name;
         private String contact_person;
         private String email;

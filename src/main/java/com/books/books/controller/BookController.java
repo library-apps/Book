@@ -42,19 +42,19 @@ public class BookController {
     }
 
     //PUT
-    @SneakyThrows(Exception.class)
-    @PutMapping(value = "/{id_book}")
-    public ResponseEntity<Object> updateBook(@RequestBody UpdateBook dto){
-        log.info("PUT http://localhost:8080/api/v1/book is called");
-        return bookService.updateBook(dto);
-    }
+    // @SneakyThrows(Exception.class)
+    // @PutMapping(value = "/{id_book}")
+    // public ResponseEntity<Object> updateBook(@RequestBody UpdateBook dto){
+    //     log.info("PUT http://localhost:8080/api/v1/book is called");
+    //     return bookService.updateBook(dto);
+    // }
     //DELETE
-    @SneakyThrows(Exception.class)
-    @DeleteMapping(value = "/{id_book}")
-    public ResponseEntity<Object> deleteBook(@PathVariable(name = "id") Integer id){
-        log.info("DELETE http://localhost:8080/api/v1/book is called");
-        return bookService.deleteBook(id);
-    }
+    // @SneakyThrows(Exception.class)
+    // @DeleteMapping(value = "/{id_book}")
+    // public ResponseEntity<Object> deleteBook(@PathVariable(name = "id") Integer id){
+    //     log.info("DELETE http://localhost:8080/api/v1/book is called");
+    //     return bookService.deleteBook(id);
+    // }
     //GETALL
     @SneakyThrows(Exception.class)
     @GetMapping(value = "/")
