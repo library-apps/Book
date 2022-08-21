@@ -1,7 +1,7 @@
 package com.books.books.service;
 
 import java.util.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
@@ -89,7 +89,7 @@ public class BookService {
 
 		Map<String, Object> res = new HashMap<String, Object>();
 
-		val aBook = bookRepository.findByBookTitle(title);
+		val aBook = bookRepository.findByTitle(title);
 
 		if (Optional.ofNullable(aBook).isPresent()) {
 			res.put("message", "success");
