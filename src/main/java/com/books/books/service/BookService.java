@@ -1,7 +1,10 @@
 package com.books.books.service;
 
 import java.util.*;
+
+// import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.*;
+// import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
@@ -54,27 +57,25 @@ public class BookService {
 
 		Map<String, Object> res = new HashMap<String, Object>();
 
-		val book = bookRepository.findById(dto.getId()).orElse(null);
-
-        if(Optional.ofNullable(book).isPresent()){            
-            book.setTitle(dto.getTitle());
-            book.setAuthor(dto.getAuthor());
-            book.setSummary(dto.getSummary());
-            book.setPages(dto.getPages());
-            book.setYear(dto.getYear());
-            book.setVendor_id(dto.getVendorId());
-            book.setImage(dto.getImage());
-            book.setIs_deleted(dto.getIsDeleted());
-    
-            bookRepository.save(book);
-    
-            res.put("message", "success");
-            res.put("data", book);
-        } else {
-            res.put("message", "failed");
-            res.put("data", null);
-        }
-
+		Book book = bookRepository.findByTitle(dto.getTitle());
+		if(Optional.ofNullable(book).isPresent()){
+			book.setTitle(dto.getTitle());
+			book.setAuthor(dto.getAuthor());
+			book.setSummary(dto.getSummary());
+			book.setPages(dto.getPages());
+			book.setYear(dto.getYear());
+			book.setVendor_id(dto.getVendorId());
+			book.setImage(dto.getImage());
+			book.setIs_deleted(dto.getIsDeleted());
+	
+			bookRepository.save(book);
+	
+			res.put("message", "success");
+			res.put("data", book);
+		} else {
+			res.put("message", "failed");
+			res.put("data", null);
+		}
         res.put("code", HttpStatus.OK.value());
 
         return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
