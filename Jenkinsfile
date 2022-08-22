@@ -17,7 +17,7 @@ pipeline {
 				withCredentials([
             		usernamePassword(credentialsId:'docker', usernameVariable:'username', passwordVariable:'password')
             	]){
-					bat 'docker login -u ${username} --password-stdin ${password}'
+					bat 'docker login -u ${username} --password ${password}'
 					bat 'mvn jib:dockerBuild'
 					bat 'docker tag $LOCAL_IMAGE $REPO_IMAGE'
 					bat 'docker push $REPO_IMAGE'
