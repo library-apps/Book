@@ -25,7 +25,7 @@ public class BookDto {
     @AllArgsConstructor
     @NoArgsConstructor
     public static class UpdateBook{
-        private String id;
+        private Integer id;
         private String title;
         private String author;
         private String summary;

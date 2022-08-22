@@ -2,6 +2,7 @@ package com.books.books.service;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.data.mongodb.repository.Query;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
@@ -52,7 +53,7 @@ public class VendorService {
 
 	// 	Map<String, Object> res = new HashMap<String, Object>();
 
-	// 	val vendor = vendorRepository.getId(dto.getId());
+	// 	Vendor vendor = vendorRepository.findByEmail(dto.getEmail());
 
     //     if(Optional.ofNullable(vendor).isPresent()){            
     //         vendor.setVendor_name(dto.getVendor_name());

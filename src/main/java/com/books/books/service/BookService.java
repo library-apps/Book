@@ -50,65 +50,36 @@ public class BookService {
     }
 	
 	// updateBook
-    // @SneakyThrows(Exception.class)
-    // public ResponseEntity<Object> updateBook(UpdateBook dto){
-    //     HttpHeaders headers = new HttpHeaders();
-	// 	headers.setContentType(MediaType.APPLICATION_JSON);
+    @SneakyThrows(Exception.class)
+    public ResponseEntity<Object> updateBook(UpdateBook dto){
+        HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
 
-	// 	Map<String, Object> res = new HashMap<String, Object>();
+		Map<String, Object> res = new HashMap<String, Object>();
 
-	// 	List<Book> book = bookRepository.findAll();
+		Book book = bookRepository.findByTitle(dto.getTitle());
+		if(Optional.ofNullable(book).isPresent()){
+			book.setTitle(dto.getTitle());
+			book.setAuthor(dto.getAuthor());
+			book.setSummary(dto.getSummary());
+			book.setPages(dto.getPages());
+			book.setYear(dto.getYear());
+			book.setVendor_id(dto.getVendorId());
+			book.setImage(dto.getImage());
+			book.setIs_deleted(dto.getIsDeleted());
+	
+			bookRepository.save(book);
+	
+			res.put("message", "success");
+			res.put("data", book);
+		} else {
+			res.put("message", "failed");
+			res.put("data", null);
+		}
+        res.put("code", HttpStatus.OK.value());
 
-		// book.forEach(a -> {
-			// System.out.println(a.get"id);
-			// String _id = a.get("id").toString();
-			// ObjectId objectId = new ObjectId(_id);
-			// book.updateOne(
-			// 	eq("id", objectId),
-			// 	Updates.set
-			// );
-				// book.setTitle(dto.getTitle());
-				// book.setAuthor(dto.getAuthor());
-				// book.setSummary(dto.getSummary());
-				// book.setPages(dto.getPages());
-				// book.setYear(dto.getYear());
-				// book.setVendor_id(dto.getVendorId());
-				// book.setImage(dto.getImage());
-				// book.setIs_deleted(dto.getIsDeleted());
-		
-				// bookRepository.save(book);
-		
-				// res.put("message", "success");
-				// res.put("data", book);
-			// } else {
-			// 	res.put("message", "failed");
-			// 	res.put("data", null);
-			// }
-		// }
-
-        // if(Optional.ofNullable(book).isPresent()){            
-        //     book.setTitle(dto.getTitle());
-        //     book.setAuthor(dto.getAuthor());
-        //     book.setSummary(dto.getSummary());
-        //     book.setPages(dto.getPages());
-        //     book.setYear(dto.getYear());
-        //     book.setVendor_id(dto.getVendorId());
-        //     book.setImage(dto.getImage());
-        //     book.setIs_deleted(dto.getIsDeleted());
-    
-        //     bookRepository.save(book);
-    
-        //     res.put("message", "success");
-        //     res.put("data", book);
-        // } else {
-    //         res.put("message", "failed");
-    //         res.put("data", null);
-        // }
-
-    //     res.put("code", HttpStatus.OK.value());
-
-    //     return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
-    // }
+        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
+    }
 
 	// getBook
     @SneakyThrows(Exception.class)
@@ -153,35 +124,35 @@ public class BookService {
 	}
 
 	// deleteBook
-    // @SneakyThrows(Exception.class)
-	// public ResponseEntity<Object> deleteBook(Integer id) {
+    @SneakyThrows(Exception.class)
+	public ResponseEntity<Object> deleteBook(Integer id) {
 
-	// 	HttpHeaders headers = new HttpHeaders();
-	// 	headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
 
-	// 	Map<String, Object> res = new HashMap<String, Object>();
+		Map<String, Object> res = new HashMap<String, Object>();
 
-	// 	val book = bookRepository.findById(id).orElse(null);
+		val book = bookRepository.findById(id).orElse(null);
 
-	// 	if (Optional.ofNullable(book).isPresent()) {
+		if (Optional.ofNullable(book).isPresent()) {
 
-	// 		book.setDeleted_at(new Date());
-    //         book.setIs_deleted(1);
+			book.setDeleted_at(new Date());
+            book.setIs_deleted(1);
 
-    //         bookRepository.save(book);
+            bookRepository.save(book);
 
-	// 		res.put("message", "success");
-	// 		res.put("data", book);
+			res.put("message", "success");
+			res.put("data", book);
 
-	// 	} else {
-	// 		res.put("message", "failed");
-	// 		res.put("data", null);
-	// 	}
+		} else {
+			res.put("message", "failed");
+			res.put("data", null);
+		}
 
-	// 	res.put("code", HttpStatus.OK.value());
+		res.put("code", HttpStatus.OK.value());
 
-	// 	return ResponseEntity.status(HttpStatus.OK).headers(headers).body(res);
-	// }
+		return ResponseEntity.status(HttpStatus.OK).headers(headers).body(res);
+	}
 
     
 }

@@ -3,33 +3,25 @@ package com.books.books.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Date;
-
 import org.springframework.data.annotation.*;
-
 import org.springframework.data.mongodb.core.mapping.*;
 
 //Annotations
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "Vendor")
+@Document(collection = "Reader")
 
-//class
-public class Vendor {
+public class Reader{
     @Id 
-    private Integer id;
-    private String vendor_name;
-    private String contact_person;
-    private String email;
+    private String _id;
+    private String reader_name;
     private String address;
+    private String email;
+    private String gender;
     private Integer phone;
-    private String status;
+    private Integer is_borrower;
     private Date deleted_at;
     private Integer is_deleted;
-
-    // public String getId() {
-    //     return id;
-    // }
 }
