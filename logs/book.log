@@ -1,507 +1,381 @@
-2022-08-22 01:10:46.740  INFO [BOOK,,] 85816 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2022-08-22 01:10:47.643  INFO [BOOK,,] 85816 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
-2022-08-22 01:10:47.650  WARN [BOOK,,] 85816 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
-2022-08-22 01:10:47.667  INFO [BOOK,,] 85816 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
-2022-08-22 01:10:52.299  INFO [BOOK,,] 85816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-08-22 01:10:52.823  INFO [BOOK,,] 85816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 486 ms. Found 2 MongoDB repository interfaces.
-2022-08-22 01:10:53.787  INFO [BOOK,,] 85816 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d4204453-e72c-3bea-9c2b-0c98823c2d47
-2022-08-22 01:10:56.994  INFO [BOOK,,] 85816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-08-22 01:10:57.040  INFO [BOOK,,] 85816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-08-22 01:10:57.043  INFO [BOOK,,] 85816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-22 01:10:57.357  INFO [BOOK,,] 85816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-08-22 01:10:57.364  INFO [BOOK,,] 85816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9568 ms
-2022-08-22 01:10:59.370  WARN [BOOK,,] 85816 --- [pool-2-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
-2022-08-22 01:11:03.926  INFO [BOOK,,] 85816 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.4+11-LTS-179"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[org.springframework.cloud.sleuth.instrument.mongodb.TraceMongoCommandListener@72ab05ed], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@27e32fe4]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=org.springframework.cloud.sleuth.instrument.mongodb.TraceSynchronousMongoClientSettingsBuilderCustomizer$$Lambda$736/0x00000008010fd188@c3c4c1c}
-2022-08-22 01:11:05.079  WARN [BOOK,,] 85816 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
-2022-08-22 01:11:06.123  WARN [BOOK,,] 85816 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
-2022-08-22 01:11:08.790  INFO [BOOK,,] 85816 --- [cluster-ClusterId{value='63027537731b025864b09cdf', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:32}] to localhost:27017
-2022-08-22 01:11:08.821  INFO [BOOK,,] 85816 --- [cluster-ClusterId{value='63027537731b025864b09cdf', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1076025700}
-2022-08-22 01:11:08.811  INFO [BOOK,,] 85816 --- [cluster-rtt-ClusterId{value='63027537731b025864b09cdf', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:31}] to localhost:27017
-2022-08-22 01:11:14.246  INFO [BOOK,,] 85816 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-08-22 01:11:16.936  WARN [BOOK,,] 85816 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-08-22 01:11:17.982  INFO [BOOK,,] 85816 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-08-22 01:11:22.683  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-08-22 01:11:22.759  INFO [BOOK,,] 85816 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-08-22 01:11:22.945  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-08-22 01:11:22.947  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-08-22 01:11:22.948  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-08-22 01:11:22.951  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-08-22 01:11:22.953  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-08-22 01:11:22.981  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-08-22 01:11:22.982  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-08-22 01:11:25.441  INFO [BOOK,,] 85816 --- [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:295)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:376)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:485)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$4d0f278e.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.books.books.BooksApplication.main(BooksApplication.java:13)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
-	... 76 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
-	... 89 more
+2022-08-23 08:54:58.228  INFO [BOOK,,] 174512 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-08-23 08:54:58.647  INFO [BOOK,,] 174512 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-08-23 08:54:58.652  WARN [BOOK,,] 174512 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-08-23 08:54:58.660  INFO [BOOK,,] 174512 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
+2022-08-23 08:55:01.090  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 08:55:01.112  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 08:55:01.224  INFO [BOOK,,] 174512 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.BookRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 08:55:01.233  INFO [BOOK,,] 174512 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.VendorRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 08:55:01.236  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 0 JPA repository interfaces.
+2022-08-23 08:55:01.738  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 08:55:01.740  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-08-23 08:55:02.235  INFO [BOOK,,] 174512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 491 ms. Found 2 MongoDB repository interfaces.
+2022-08-23 08:55:03.577  INFO [BOOK,,] 174512 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d735d41-bbd1-3a70-8200-abd3d42c9e9b
+2022-08-23 08:55:03.929  INFO [BOOK,,] 174512 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 08:55:03.945  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 08:55:03.947  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 08:55:03.951  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 08:55:03.958  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:55:03.964  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 08:55:03.970  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 08:55:03.973  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 08:55:03.977  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:55:03.988  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:55:03.992  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:55:04.014  INFO [BOOK,,] 174512 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:55:05.686  INFO [BOOK,,] 174512 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 08:55:07.409  INFO [BOOK,,] 174512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8098 (http)
+2022-08-23 08:55:07.427  INFO [BOOK,,] 174512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 08:55:07.429  INFO [BOOK,,] 174512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-23 08:55:07.591  INFO [BOOK,,] 174512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 08:55:07.593  INFO [BOOK,,] 174512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8871 ms
+2022-08-23 08:55:08.311  INFO [BOOK,,] 174512 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 08:55:08.325  INFO [BOOK,,] 174512 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 08:55:09.402  WARN [BOOK,,] 174512 --- [pool-2-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-08-23 08:55:10.512  INFO [BOOK,,] 174512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 08:55:10.800  INFO [BOOK,,] 174512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-23 08:55:11.668  WARN [BOOK,,] 174512 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: 'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+2022-08-23 08:55:12.678  WARN [BOOK,,] 174512 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-23 08:55:12.684  INFO [BOOK,,] 174512 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-23 08:55:12.743  INFO [BOOK,,] 174512 --- [main] ConditionEvaluationReportLoggingListener : 
 
-2022-08-22 01:11:25.493  WARN [BOOK,,] 85816 --- [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2022-08-22 01:11:25.501  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
-	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
-	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
-	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:295)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:376)
-	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:485)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$4d0f278e.getEurekaClient(<generated>)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
-	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.books.books.BooksApplication.main(BooksApplication.java:13)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-23 08:55:12.856 ERROR [BOOK,,] 174512 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-2022-08-22 01:11:25.524  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2022-08-22 01:11:25.525  WARN [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2022-08-22 01:11:25.528  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2022-08-22 01:11:25.559  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-08-22 01:11:25.565  INFO [BOOK,,] 85816 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-08-22 01:11:25.592  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1661105485574 with initial instances count: 0
-2022-08-22 01:11:25.667  INFO [BOOK,,] 85816 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOK with eureka with status UP
-2022-08-22 01:11:25.671  INFO [BOOK,,] 85816 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1661105485671, current=UP, previous=STARTING]
-2022-08-22 01:11:25.767  INFO [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081: registering service...
-2022-08-22 01:11:28.736  INFO [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
-	... 22 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
-	... 35 more
+***************************
+APPLICATION FAILED TO START
+***************************
 
-2022-08-22 01:11:28.752  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2022-08-22 01:11:28.827  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081 - registration failed Cannot execute request on any known server
+Description:
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
 
-2022-08-22 01:11:28.830  INFO [BOOK,,] 85816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-08-22 01:11:28.837  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+    org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor.getValidationMode(PersistenceUnitInfoDescriptor.java:88)
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+The following method did not exist:
 
-2022-08-22 01:11:28.849  INFO [BOOK,,] 85816 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
-2022-08-22 01:11:30.002  INFO [BOOK,,] 85816 --- [main] com.books.books.BooksApplication         : Started BooksApplication in 60.969 seconds (JVM running for 63.714)
-2022-08-22 01:11:41.423  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOK with eureka with status DOWN
-2022-08-22 01:11:41.439  INFO [BOOK,,] 85816 --- [Thread-3] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
-2022-08-22 01:11:41.441  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1661105501441, current=DOWN, previous=UP]
-2022-08-22 01:11:41.445  INFO [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081: registering service...
-2022-08-22 01:11:41.588  INFO [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
-	... 22 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
-	... 35 more
+    'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
 
-2022-08-22 01:11:41.724  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOK": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2022-08-22 01:11:41.777  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081 - registration failed Cannot execute request on any known server
+The calling method's class, org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor, was loaded from the following location:
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/hibernate-core-5.6.10.Final.jar!/org/hibernate/jpa/boot/internal/PersistenceUnitInfoDescriptor.class
 
-2022-08-22 01:11:41.852  WARN [BOOK,,] 85816 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+The called method's class, javax.persistence.spi.PersistenceUnitInfo, is available from the following locations:
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/jakarta.persistence-api-2.2.3.jar!/javax/persistence/spi/PersistenceUnitInfo.class
 
-2022-08-22 01:11:42.862  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-08-22 01:11:45.978  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-08-22 01:11:46.059  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOK/host.docker.internal:BOOK:8081": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOK/host.docker.internal:BOOK:8081": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
-	... 40 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:579)
-	at java.base/sun.nio.ch.Net.connect(Net.java:568)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
-	... 53 more
+The called method's class hierarchy was loaded from the following locations:
 
-2022-08-22 01:11:46.109  WARN [BOOK,,] 85816 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOK/host.docker.internal:BOOK:8081": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-2022-08-22 01:11:46.119 ERROR [BOOK,,] 85816 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK/host.docker.internal:BOOK:8081 - de-registration failedCannot execute request on any known server
+    javax.persistence.spi.PersistenceUnitInfo: jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar!/:1.10.17]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.1.3.jar!/:3.1.3]
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.1.3.jar!/:3.1.3]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156) ~[spring-beans-5.3.22.jar!/:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.22.jar!/:5.3.22]
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.22.jar!/:5.3.22]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-2.7.2.jar!/:2.7.2]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.22.jar!/:5.3.22]
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.2.jar!/:2.7.2]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.2.jar!/:2.7.2]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2022-08-22 01:11:46.171  INFO [BOOK,,] 85816 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor and javax.persistence.spi.PersistenceUnitInfo
+
+2022-08-23 08:55:12.871  INFO [BOOK,,] 174512 --- [Thread-3] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-23 08:56:26.643  INFO [BOOK,,] 186208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-08-23 08:56:27.169  INFO [BOOK,,] 186208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-08-23 08:56:27.171  WARN [BOOK,,] 186208 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-08-23 08:56:27.185  INFO [BOOK,,] 186208 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
+2022-08-23 08:56:29.701  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 08:56:29.708  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 08:56:29.940  INFO [BOOK,,] 186208 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.BookRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 08:56:29.959  INFO [BOOK,,] 186208 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.VendorRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 08:56:29.967  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 0 JPA repository interfaces.
+2022-08-23 08:56:30.505  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 08:56:30.508  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-08-23 08:56:30.997  INFO [BOOK,,] 186208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 457 ms. Found 2 MongoDB repository interfaces.
+2022-08-23 08:56:31.926  INFO [BOOK,,] 186208 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d735d41-bbd1-3a70-8200-abd3d42c9e9b
+2022-08-23 08:56:32.450  INFO [BOOK,,] 186208 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 08:56:32.452  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 08:56:32.483  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 08:56:32.490  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 08:56:32.493  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:56:32.496  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 08:56:32.511  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 08:56:32.537  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 08:56:32.540  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:56:32.556  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:56:32.559  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:56:32.568  INFO [BOOK,,] 186208 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 08:56:34.327  INFO [BOOK,,] 186208 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 08:56:35.479  INFO [BOOK,,] 186208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8098 (http)
+2022-08-23 08:56:35.507  INFO [BOOK,,] 186208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 08:56:35.508  INFO [BOOK,,] 186208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-23 08:56:35.692  INFO [BOOK,,] 186208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 08:56:35.695  INFO [BOOK,,] 186208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8425 ms
+2022-08-23 08:56:36.328  INFO [BOOK,,] 186208 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 08:56:36.373  INFO [BOOK,,] 186208 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 08:56:37.143  WARN [BOOK,,] 186208 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-08-23 08:56:39.873  INFO [BOOK,,] 186208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 08:56:40.174  INFO [BOOK,,] 186208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-23 08:56:40.712  WARN [BOOK,,] 186208 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: 'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+2022-08-23 08:56:41.728  WARN [BOOK,,] 186208 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-23 08:56:41.735  INFO [BOOK,,] 186208 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-23 08:56:41.796  INFO [BOOK,,] 186208 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-23 08:56:41.911 ERROR [BOOK,,] 186208 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor.getValidationMode(PersistenceUnitInfoDescriptor.java:88)
+
+The following method did not exist:
+
+    'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+
+The calling method's class, org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor, was loaded from the following location:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/hibernate-core-5.6.10.Final.jar!/org/hibernate/jpa/boot/internal/PersistenceUnitInfoDescriptor.class
+
+The called method's class, javax.persistence.spi.PersistenceUnitInfo, is available from the following locations:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/jakarta.persistence-api-2.2.3.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    javax.persistence.spi.PersistenceUnitInfo: jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor and javax.persistence.spi.PersistenceUnitInfo
+
+2022-08-23 09:02:37.537  INFO [BOOK,,] 19216 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-08-23 09:02:38.300  INFO [BOOK,,] 19216 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-08-23 09:02:38.323  WARN [BOOK,,] 19216 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-08-23 09:02:38.343  INFO [BOOK,,] 19216 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
+2022-08-23 09:02:43.010  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:02:43.024  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 09:02:43.211  INFO [BOOK,,] 19216 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.BookRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:02:43.246  INFO [BOOK,,] 19216 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.VendorRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:02:43.260  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 0 JPA repository interfaces.
+2022-08-23 09:02:43.959  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:02:43.977  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-08-23 09:02:44.782  INFO [BOOK,,] 19216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 781 ms. Found 2 MongoDB repository interfaces.
+2022-08-23 09:02:46.564  INFO [BOOK,,] 19216 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d735d41-bbd1-3a70-8200-abd3d42c9e9b
+2022-08-23 09:02:47.111  INFO [BOOK,,] 19216 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 09:02:47.116  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 09:02:47.175  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:02:47.210  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:02:47.329  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:02:47.344  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 09:02:47.347  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:02:47.354  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:02:47.358  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:02:47.362  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:02:47.365  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:02:47.371  INFO [BOOK,,] 19216 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:02:49.904  INFO [BOOK,,] 19216 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 09:02:51.713  INFO [BOOK,,] 19216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8098 (http)
+2022-08-23 09:02:51.747  INFO [BOOK,,] 19216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 09:02:51.749  INFO [BOOK,,] 19216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-23 09:02:52.003  INFO [BOOK,,] 19216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 09:02:52.006  INFO [BOOK,,] 19216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13572 ms
+2022-08-23 09:02:52.648  INFO [BOOK,,] 19216 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 09:02:52.664  INFO [BOOK,,] 19216 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 09:02:53.777  WARN [BOOK,,] 19216 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-08-23 09:02:56.812  INFO [BOOK,,] 19216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 09:02:57.325  INFO [BOOK,,] 19216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-23 09:02:58.304  WARN [BOOK,,] 19216 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: 'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+2022-08-23 09:02:59.393  WARN [BOOK,,] 19216 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-23 09:02:59.431  INFO [BOOK,,] 19216 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-23 09:02:59.524  INFO [BOOK,,] 19216 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-23 09:02:59.836 ERROR [BOOK,,] 19216 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor.getValidationMode(PersistenceUnitInfoDescriptor.java:88)
+
+The following method did not exist:
+
+    'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+
+The calling method's class, org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor, was loaded from the following location:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/hibernate-core-5.6.10.Final.jar!/org/hibernate/jpa/boot/internal/PersistenceUnitInfoDescriptor.class
+
+The called method's class, javax.persistence.spi.PersistenceUnitInfo, is available from the following locations:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/jakarta.persistence-api-2.2.3.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    javax.persistence.spi.PersistenceUnitInfo: jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor and javax.persistence.spi.PersistenceUnitInfo
+
+2022-08-23 09:03:02.139  INFO [BOOK,,] 19216 --- [Thread-3] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-08-23 09:08:17.224  INFO [BOOK,,] 11080 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-08-23 09:08:17.625  INFO [BOOK,,] 11080 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-08-23 09:08:17.626  WARN [BOOK,,] 11080 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-08-23 09:08:17.632  INFO [BOOK,,] 11080 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
+2022-08-23 09:08:20.063  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:08:20.080  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 09:08:20.298  INFO [BOOK,,] 11080 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.BookRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:08:20.319  INFO [BOOK,,] 11080 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.VendorRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:08:20.330  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192 ms. Found 0 JPA repository interfaces.
+2022-08-23 09:08:20.897  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:08:20.904  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-08-23 09:08:21.494  INFO [BOOK,,] 11080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 521 ms. Found 2 MongoDB repository interfaces.
+2022-08-23 09:08:22.461  INFO [BOOK,,] 11080 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d735d41-bbd1-3a70-8200-abd3d42c9e9b
+2022-08-23 09:08:22.836  INFO [BOOK,,] 11080 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 09:08:22.837  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 09:08:22.849  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:08:22.882  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:08:22.889  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:08:22.892  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 09:08:22.894  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:08:22.905  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:08:22.907  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:08:22.909  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:08:22.911  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:08:22.913  INFO [BOOK,,] 11080 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:08:24.683  INFO [BOOK,,] 11080 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 09:08:26.060  INFO [BOOK,,] 11080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8098 (http)
+2022-08-23 09:08:26.084  INFO [BOOK,,] 11080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 09:08:26.086  INFO [BOOK,,] 11080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-23 09:08:26.323  INFO [BOOK,,] 11080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 09:08:26.324  INFO [BOOK,,] 11080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8614 ms
+2022-08-23 09:08:27.015  INFO [BOOK,,] 11080 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 09:08:27.025  INFO [BOOK,,] 11080 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 09:08:27.911  WARN [BOOK,,] 11080 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-08-23 09:08:29.078  INFO [BOOK,,] 11080 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 09:08:29.446  INFO [BOOK,,] 11080 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-23 09:08:30.078  WARN [BOOK,,] 11080 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: 'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+2022-08-23 09:08:31.094  WARN [BOOK,,] 11080 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-23 09:08:31.118  INFO [BOOK,,] 11080 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-23 09:08:31.206  INFO [BOOK,,] 11080 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-23 09:08:31.309 ERROR [BOOK,,] 11080 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor.getValidationMode(PersistenceUnitInfoDescriptor.java:88)
+
+The following method did not exist:
+
+    'javax.persistence.ValidationMode javax.persistence.spi.PersistenceUnitInfo.getValidationMode()'
+
+The calling method's class, org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor, was loaded from the following location:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/hibernate-core-5.6.10.Final.jar!/org/hibernate/jpa/boot/internal/PersistenceUnitInfoDescriptor.class
+
+The called method's class, javax.persistence.spi.PersistenceUnitInfo, is available from the following locations:
+
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+    jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/jakarta.persistence-api-2.2.3.jar!/javax/persistence/spi/PersistenceUnitInfo.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    javax.persistence.spi.PersistenceUnitInfo: jar:file:/D:/books/target/books-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/persistence-api-1.0.2.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor and javax.persistence.spi.PersistenceUnitInfo
+
+2022-08-23 09:10:39.226  INFO [BOOK,,] 117548 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-08-23 09:10:39.594  INFO [BOOK,,] 117548 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-08-23 09:10:39.595  WARN [BOOK,,] 117548 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/BOOK/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-08-23 09:10:39.610  INFO [BOOK,,] 117548 --- [main] com.books.books.BooksApplication         : The following 1 profile is active: "native"
+2022-08-23 09:10:41.666  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:10:41.673  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 09:10:41.790  INFO [BOOK,,] 117548 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.BookRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:10:41.800  INFO [BOOK,,] 117548 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.books.books.repository.VendorRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2022-08-23 09:10:41.803  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 0 JPA repository interfaces.
+2022-08-23 09:10:42.378  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-23 09:10:42.380  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-08-23 09:10:43.084  INFO [BOOK,,] 117548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 684 ms. Found 2 MongoDB repository interfaces.
+2022-08-23 09:10:44.005  INFO [BOOK,,] 117548 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8d735d41-bbd1-3a70-8200-abd3d42c9e9b
+2022-08-23 09:10:44.321  INFO [BOOK,,] 117548 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 09:10:44.324  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 09:10:44.333  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:10:44.336  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 09:10:44.340  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:10:44.342  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 09:10:44.346  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:10:44.359  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 09:10:44.368  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:10:44.370  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:10:44.373  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource springCloudDefaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:10:44.379  INFO [BOOK,,] 117548 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 09:10:45.886  INFO [BOOK,,] 117548 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 09:10:46.918  INFO [BOOK,,] 117548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8098 (http)
+2022-08-23 09:10:46.949  INFO [BOOK,,] 117548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 09:10:46.955  INFO [BOOK,,] 117548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-23 09:10:47.207  INFO [BOOK,,] 117548 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 09:10:47.214  INFO [BOOK,,] 117548 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7554 ms
+2022-08-23 09:10:47.750  INFO [BOOK,,] 117548 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 09:10:47.758  INFO [BOOK,,] 117548 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 09:10:48.645  WARN [BOOK,,] 117548 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://127.0.0.1:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-08-23 09:10:49.523  INFO [BOOK,,] 117548 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 09:10:49.933  INFO [BOOK,,] 117548 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-23 09:10:50.907  INFO [BOOK,,] 117548 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-23 09:10:51.264  INFO [BOOK,,] 117548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-23 09:10:51.850  INFO [BOOK,,] 117548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-23 09:10:52.027  INFO [BOOK,,] 117548 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2022-08-23 09:10:56.565  INFO [BOOK,,] 117548 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-23 09:10:56.590  INFO [BOOK,,] 117548 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-23 09:10:57.728  INFO [BOOK,,] 117548 --- [cluster-rtt-ClusterId{value='63043731b3d5f83dc6403b19', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:54}] to localhost:27017
+2022-08-23 09:10:57.729  INFO [BOOK,,] 117548 --- [cluster-ClusterId{value='63043731b3d5f83dc6403b19', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:53}] to localhost:27017
+2022-08-23 09:10:57.743  INFO [BOOK,,] 117548 --- [cluster-ClusterId{value='63043731b3d5f83dc6403b19', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=63345000}
+2022-08-23 09:10:57.731  INFO [BOOK,,] 117548 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.4+11-LTS-179"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[org.springframework.cloud.sleuth.instrument.mongodb.TraceMongoCommandListener@34d45ec0], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4667c4c1]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=org.springframework.cloud.sleuth.instrument.mongodb.TraceSynchronousMongoClientSettingsBuilderCustomizer$$Lambda$978/0x0000000801452338@18137eab}
+2022-08-23 09:10:58.265  WARN [BOOK,,] 117548 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2022-08-23 09:10:58.840  WARN [BOOK,,] 117548 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2022-08-23 09:10:59.810  WARN [BOOK,,] 117548 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'booksSecurityConfiguration': Unsatisfied dependency expressed through field 'UserDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-08-23 09:10:59.830  INFO [BOOK,,] 117548 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-23 09:10:59.889  INFO [BOOK,,] 117548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-23 09:10:59.948  INFO [BOOK,,] 117548 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-23 09:11:00.953  WARN [BOOK,,] 117548 --- [main] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-08-23 09:11:00.964  INFO [BOOK,,] 117548 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-08-23 09:11:01.010  INFO [BOOK,,] 117548 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-23 09:11:01.188 ERROR [BOOK,,] 117548 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field UserDetailsService in com.books.books.security.BooksSecurityConfiguration required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
