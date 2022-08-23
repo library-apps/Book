@@ -1,7 +1,5 @@
 package com.books.books.security;
 
-// import com.books.books.filter.CustomAuthenticationFilter;
-// import com.books.books.filter.CustomAuthorizationFilter;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,9 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
-// import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-// import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -38,8 +34,6 @@ public class BooksSecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/login").permitAll()
                 .antMatchers("/users/**", "/settings/**").hasAuthority("ROLE_SUPER_ADMIN")
-                // .hasAnyAuthority("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
-                // .hasAnyAuthority("ROLE_ADMIN", "ROLE_SUPER_ADMIN")
                 .anyRequest().authenticated()
                 .and().formLogin()
                 .loginPage("/login")
@@ -53,18 +47,9 @@ public class BooksSecurityConfiguration {
         http.headers().frameOptions().sameOrigin();
  
         return http.build();
-        // CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
-
-
-        // http.csrf().disable();
-        // http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        // http.authorizeRequests().anyRequest().fullyAuthenticated();
-        // http.addFilter(customAuthenticationFilter);
-        // http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
     @Bean
-    // @Override
     @SneakyThrows(Exception.class)
     public AuthenticationManager authenticationManagerBean(AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
