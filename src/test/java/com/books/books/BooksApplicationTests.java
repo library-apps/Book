@@ -1,73 +1,73 @@
 package com.books.books;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+// import org.junit.Before;
+// import org.junit.Test;
+// import org.junit.runner.RunWith;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+// import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+// import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.test.context.junit4.SpringRunner;
-import com.books.books.repository.BookRepository;
-import com.books.books.model.Book;
-import java.util.ArrayList;
-import java.util.List;
+// import org.springframework.data.domain.Page;
+// import org.springframework.data.domain.PageRequest;
+// import org.springframework.test.context.junit4.SpringRunner;
+// import com.books.books.repository.BookRepository;
+// import com.books.books.model.Book;
+// import java.util.ArrayList;
+// import java.util.List;
 // import com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesConfiguration;
 // import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.assertThat;
+// import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@RunWith(SpringRunner.class)
-@DataMongoTest
-@AutoConfigureTestDatabase(replace = Replace.NONE)
+// @RunWith(SpringRunner.class)
+// @DataMongoTest
+// @AutoConfigureTestDatabase(replace = Replace.NONE)
 // @Import(EnableEncryptablePropertiesConfiguration.class)
 class BooksApplicationTests {
-	@Autowired
-    BookRepository bookRepository;
+	// @Autowired
+    // BookRepository bookRepository;
 
-	@Before
-    public void setupBeforeEachTest() throws Exception {
-        List<Book> bookList = new ArrayList<>();
-        Book book1 = new Book();
-		book1.setTitle("Perjuangan");
-        book1.setAuthor("Authir");
-        book1.setSummary("The quick fox is jumping on the lazy resting dog.");
-        book1.setPages(123);
-        book1.setYear(1991);
-        book1.setVendor_id("1");
-        book1.setImage("NULL");
-        book1.setIs_deleted(0);
-		bookList.add(book1);
+	// @Before
+    // public void setupBeforeEachTest() throws Exception {
+    //     List<Book> bookList = new ArrayList<>();
+    //     Book book1 = new Book();
+	// 	book1.setTitle("Perjuangan");
+    //     book1.setAuthor("Authir");
+    //     book1.setSummary("The quick fox is jumping on the lazy resting dog.");
+    //     book1.setPages(123);
+    //     book1.setYear(1991);
+    //     book1.setVendor_id("1");
+    //     book1.setImage("NULL");
+    //     book1.setIs_deleted(0);
+	// 	bookList.add(book1);
 
-        Book book2 = new Book();
-        book2.setTitle("Perjuaangan");
-        book2.setAuthor("Authirr");
-        book2.setSummary("The qquick fox is jumping on the lazy resting dog.");
-        book2.setPages(124);
-        book2.setYear(1991);
-        book2.setVendor_id("1");
-        book2.setImage("NULL");
-        book2.setIs_deleted(0);
-		bookList.add(book2);
+    //     Book book2 = new Book();
+    //     book2.setTitle("Perjuaangan");
+    //     book2.setAuthor("Authirr");
+    //     book2.setSummary("The qquick fox is jumping on the lazy resting dog.");
+    //     book2.setPages(124);
+    //     book2.setYear(1991);
+    //     book2.setVendor_id("1");
+    //     book2.setImage("NULL");
+    //     book2.setIs_deleted(0);
+	// 	bookList.add(book2);
 
-        bookRepository.saveAll(bookList);
-    }
-    @Test
-    public void shouldFindAll() {
-        List<Book> BookListAll = bookRepository.findAll();
+    //     bookRepository.saveAll(bookList);
+    // }
+    // @Test
+    // public void shouldFindAll() {
+    //     List<Book> BookListAll = bookRepository.findAll();
 
-        assertThat(BookListAll).isNotEmpty();
-        assertThat(BookListAll.size()).isEqualTo(2);
+    //     assertThat(BookListAll).isNotEmpty();
+    //     assertThat(BookListAll.size()).isEqualTo(2);
 
-        Page<Book> BookPage = bookRepository.findAll(PageRequest.of(0, 1));
+    //     Page<Book> BookPage = bookRepository.findAll(PageRequest.of(0, 1));
 
-        assertThat(BookPage.getContent()).isNotEmpty();
-        assertThat(BookPage.getContent().size()).isEqualTo(1);
-    }
+    //     assertThat(BookPage.getContent()).isNotEmpty();
+    //     assertThat(BookPage.getContent().size()).isEqualTo(1);
+    // }
 	// void contextLoads() {
 	// }
 

@@ -2,9 +2,7 @@ package com.books.books.service;
 
 import java.util.*;
 
-// import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.*;
-// import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 
@@ -23,35 +21,38 @@ public class BookService {
 
 	// createBook
     @SneakyThrows(Exception.class)
-    public ResponseEntity<Object> createBook(CreateBook dto){
+    public ResponseEntity<Object> createBook(boolean auth, CreateBook dto){
         HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
-
 		Map<String, Object> res = new HashMap<String, Object>();
+		if (auth==true){
+			Book book = new Book();
+	
+			book.setTitle(dto.getTitle());
+			book.setAuthor(dto.getAuthor());
+			book.setSummary(dto.getSummary());
+			book.setPages(dto.getPages());
+			book.setYear(dto.getYear());
+			book.setVendor_id(dto.getVendorId());
+			book.setImage(dto.getImage());
+			book.setIs_deleted(dto.getIsDeleted());
+	
+			bookRepository.save(book);
+	
+			res.put("code", HttpStatus.CREATED.value());
+			res.put("message", "success");
+			res.put("data", book);
+		} else {
+			res.put("message", "failed");
+			res.put("data", null);
+		}
 
-		Book book = new Book();
-
-		book.setTitle(dto.getTitle());
-        book.setAuthor(dto.getAuthor());
-        book.setSummary(dto.getSummary());
-        book.setPages(dto.getPages());
-        book.setYear(dto.getYear());
-        book.setVendor_id(dto.getVendorId());
-        book.setImage(dto.getImage());
-        book.setIs_deleted(dto.getIsDeleted());
-
-		bookRepository.save(book);
-
-		res.put("code", HttpStatus.CREATED.value());
-		res.put("message", "success");
-		res.put("data", book);
-
-        return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
+		return ResponseEntity.status(HttpStatus.CREATED).headers(headers).body(res);
     }
 	
 	// updateBook
     @SneakyThrows(Exception.class)
-    public ResponseEntity<Object> updateBook(UpdateBook dto){
+    public ResponseEntity<Object> updateBook(boolean auth, UpdateBook dto){
         HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 
@@ -125,7 +126,7 @@ public class BookService {
 
 	// deleteBook
     @SneakyThrows(Exception.class)
-	public ResponseEntity<Object> deleteBook(Integer id) {
+	public ResponseEntity<Object> deleteBook(boolean auth, Integer id) {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
