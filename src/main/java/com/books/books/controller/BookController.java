@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 import lombok.SneakyThrows;
 // import org.springframework.security.access.prepost.*;
-import javax.servlet.http.HttpServletRequest;
-// import com.books.books.controller.CheckToken;
 
 @Slf4j
 @RestController
@@ -29,28 +27,24 @@ public class BookController {
     @SneakyThrows(Exception.class)
     @PostMapping(value = "/add")
     // @PreAuthorize("hasRole('ADMIN')")
-    
-    public ResponseEntity<Object> createBook(HttpServletRequest request, @RequestBody CreateBook dto){
+    public ResponseEntity<Object> createBook(@RequestBody CreateBook dto){
         log.info("POST http://localhost:8098/api/v1/book is called");
-        boolean result = CheckToken.checkAuthorization(request, "SUPER_ADMIN");
-        return bookService.createBook(result, dto);
+        return bookService.createBook(dto);
     }
 
     //PUT
     @SneakyThrows(Exception.class)
     @PutMapping(value = "/{id_book}")
-    public ResponseEntity<Object> updateBook(HttpServletRequest request, @RequestBody UpdateBook dto){
+    public ResponseEntity<Object> updateBook(@RequestBody UpdateBook dto){
         log.info("PUT http://localhost:8098/api/v1/book is called");
-        boolean result = CheckToken.checkAuthorization(request, "SUPER_ADMIN");
-        return bookService.updateBook(result, dto);
+        return bookService.updateBook(dto);
     }
     //DELETE
     @SneakyThrows(Exception.class)
     @DeleteMapping(value = "/{id_book}")
-    public ResponseEntity<Object> deleteBook(HttpServletRequest request, @PathVariable(name = "id") Integer id){
+    public ResponseEntity<Object> deleteBook(@PathVariable(name = "id") Integer id){
         log.info("DELETE http://localhost:8098/api/v1/book is called");
-        boolean result = CheckToken.checkAuthorization(request, "SUPER_ADMIN");
-        return bookService.deleteBook(result, id);
+        return bookService.deleteBook(id);
     }
     //GETALL
     @SneakyThrows(Exception.class)
