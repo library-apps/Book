@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.*;
 // import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
-
+import lombok.extern.slf4j.Slf4j;
 import com.books.books.dto.BookDto.*;
 import com.books.books.model.*;
 import com.books.books.repository.BookRepository;
@@ -16,11 +16,11 @@ import lombok.SneakyThrows;
 import lombok.val;
 
 
+@Slf4j
 @Service
 public class BookService {
     @Autowired
     private BookRepository bookRepository;
-
 	// createBook
     @SneakyThrows(Exception.class)
     public ResponseEntity<Object> createBook(CreateBook dto){
@@ -41,6 +41,7 @@ public class BookService {
         book.setIs_deleted(dto.getIsDeleted());
 
 		bookRepository.save(book);
+		log.info("A book created.");
 
 		res.put("code", HttpStatus.CREATED.value());
 		res.put("message", "success");

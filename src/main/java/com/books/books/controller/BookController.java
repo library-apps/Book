@@ -26,7 +26,6 @@ public class BookController {
     //POST
     @SneakyThrows(Exception.class)
     @PostMapping(value = "/add")
-    // @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Object> createBook(@RequestBody CreateBook dto){
         log.info("POST http://localhost:8098/api/v1/book is called");
         return bookService.createBook(dto);
