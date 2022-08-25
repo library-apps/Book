@@ -19,7 +19,7 @@ import org.springframework.data.mongodb.core.mapping.*;
 //class
 public class Vendor {
     @Id 
-    private Integer id;
+    private String id;
     private String vendor_name;
     private String contact_person;
     private String email;

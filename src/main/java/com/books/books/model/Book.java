@@ -20,7 +20,7 @@ import org.springframework.data.mongodb.core.mapping.*;
 //class
 public class Book {
     @Id
-    private Integer id;
+    private String id;
     private String title;
     private String author;
     private String summary;
